@@ -14,6 +14,8 @@ $ terraform apply
 
 Note that this example may create resources which cost money. Run `terraform destroy` when you don't need these resources.
 
+The Prometheus alert rule is disabled by default. After the newly created Prometheus instance is ready, set `create_alert_rules = true` and apply again to create the rule.
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 

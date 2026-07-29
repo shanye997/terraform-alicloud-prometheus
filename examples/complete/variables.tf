@@ -55,20 +55,14 @@ variable "grouping_fields" {
   default     = ["CreateDispatchRuleValue"]
 }
 
-variable "notify_type" {
-  description = "The type of the alert contact. Valid values: ARMS_CONTACT: contact. ARMS_CONTACT_GROUP: contact group."
-  type        = string
-  default     = "ARMS_CONTACT_GROUP"
-}
-
-variable "notification_name" {
-  description = "The name of arms notification."
-  type        = string
-  default     = "tf-testacc-notification"
-}
-
 variable "notify_channels" {
   description = "The name of arms notification."
   type        = list(string)
   default     = ["dingTalk"]
+}
+
+variable "create_alert_rules" {
+  description = "Whether to create Prometheus alert rules after the instance is ready."
+  type        = bool
+  default     = false
 }
